@@ -8,11 +8,16 @@
     background-position: center center;
 }
 
-.banner-text {
+.banner-content {
     color: white;
 }
 
 .AddMovie {
     float: right;
     margin: 30px;
+}
+
+.logo-nav {
+    margin: 45px 0px 0px 100px;
+    height: 25px;
 }

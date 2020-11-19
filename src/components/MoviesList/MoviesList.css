@@ -1,0 +1,8 @@
+.Movieslist {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #232323;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
