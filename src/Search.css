@@ -1,0 +1,30 @@
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 80rem;
+    height: 44px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-top: 10px;
+    background: #232323;
+    opacity: 0.9;
+  }
+  
+  .searchButton {
+    width: 300px;
+    margin: 10px;
+    height: 44px;
+  }
+  
+  .wrap{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

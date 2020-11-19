@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    height: 40vh;
+    height: 60vh;
     width: 100%;
     background-color: grey;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/b1/b6/9a/b1b69ad96c26abeb22a387527b9e7a81.jpg'); 
@@ -10,4 +10,9 @@
 
 .banner-text {
     color: white;
+}
+
+.AddMovie {
+    float: right;
+    margin: 30px;
 }
