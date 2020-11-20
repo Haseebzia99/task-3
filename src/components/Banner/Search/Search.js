@@ -1,17 +1,27 @@
-import React from 'react';
 import './Search.css';
 import Button from 'react-bootstrap/Button';
+import React, { Component } from 'react'
 
-const Search = () => {
-    return (
-        <div class="wrap">
-            <h1> FIND YOUR MOVIE </h1>
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="What do you want to watch?"/>
-                <Button className="searchButton" variant="danger">SEARCH</Button>
+class Search extends Component {
+    constructor() {
+        super()
+        this.state ={
+            browse: 'FIND YOUR MOVIE'
+        }
+    }
+
+    render() {
+        return (
+            <div className="wrap">
+               <h1>{this.state.browse}</h1>
+               <div class="search">
+                    <input type="text" class="searchTerm" placeholder="What do you want to watch?"/>
+                    <Button className="searchButton" variant="danger">SEARCH</Button>
+               </div>
             </div>
-        </div>
-    )
-};
+        )
+    }
+}
+
 
 export default Search; 
