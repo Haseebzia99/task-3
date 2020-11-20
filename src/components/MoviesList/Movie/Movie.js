@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import propTypes from 'prop-types';
 
 const Movie = ({moviesDetail}) => {
     return (
@@ -9,6 +10,13 @@ const Movie = ({moviesDetail}) => {
             <p>{moviesDetail.year}</p>         
         </div>
     )
+}
+
+Movie.propTypes = {
+    name: propTypes.string,
+    title: propTypes.string,
+    genre: propTypes.string,
+    year: propTypes.number
 }
 
 export default Movie
