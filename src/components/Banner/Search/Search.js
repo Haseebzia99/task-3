@@ -14,7 +14,7 @@ class Search extends Component {
         return (
             <div className="wrap">
                <h1>{this.state.browse}</h1>
-               <div class="search">
+               <div className="search">
                     <input type="text" class="searchTerm" placeholder="What do you want to watch?"/>
                     <Button className="searchButton" variant="danger">SEARCH</Button>
                </div>

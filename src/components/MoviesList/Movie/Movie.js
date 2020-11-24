@@ -69,7 +69,6 @@ const Movie = ({moviesDetail}) => {
 }
 
 Movie.propTypes = {
-    name: propTypes.string.isRequired,
     title: propTypes.string.isRequired,
     genre: propTypes.string.isRequired,
     year: propTypes.number.isRequired

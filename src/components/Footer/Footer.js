@@ -18,7 +18,7 @@ class Footer extends Component {
 
     render () {
         return (
-            <div class="footer">
+            <div className="footer">
             <h2> {this.state.date.toLocaleTimeString()} </h2>
             <button onClick={this.tick}>Update</button>
              <img className="logo" src={"https://www.freepnglogos.com/uploads/netflix-logo-0.png"}/>
