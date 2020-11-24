@@ -1,7 +1,7 @@
 import './Banner.css'
 import Button from 'react-bootstrap/Button';
 import Search from './Search/Search'
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { background } from './Styles';
 import { Modal } from "react-bootstrap";
 
@@ -9,6 +9,7 @@ function AddMovie() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <div>
             <Button style={background} className="AddMovie" onClick={handleShow}>+ ADD MOVIE</Button>

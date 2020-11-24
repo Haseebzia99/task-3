@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import movies from '../../movies';
 
 const SwitchBanner = ({switchBannerId, setswitchBanner}) => {
@@ -9,7 +9,7 @@ useEffect(() => {
     setMovie(newMovie)
 })
 
-const onReset = () => setswitchBanner(false);
+const onReset = useCallback(() => {setswitchBanner(false)},[setswitchBanner])
 
     return(
         <div className="Movieslist">
