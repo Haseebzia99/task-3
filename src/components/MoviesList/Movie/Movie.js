@@ -3,6 +3,7 @@ import { Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import './Movie.css';
+import movies from '../../../movies';
 
 function EditMovieModal(props) {
     return (
@@ -45,7 +46,7 @@ function EditMovieModal(props) {
     );
   }
 
-const Movie = ({moviesDetail}) => {
+const Movie = ({ moviesDetail, imageClick}) => {
     const [showEdit, setShowEdit] = useState(false);
     const handleCloseEdit = () => setShowEdit(false);
     const handleShowEdit = () => setShowEdit(true);
@@ -56,7 +57,7 @@ const Movie = ({moviesDetail}) => {
 
     return (
         <div>
-            <img src={moviesDetail.image}/>
+            <img onClick={() => imageClick(moviesDetail.id)} src={moviesDetail.image}/>
             <div className="modals">
                 <EditMovieModal show={showEdit} handleClose={handleCloseEdit} handleShow={handleShowEdit}/>
                 <DeleteMovieModal show={showDelete} handleClose={handleCloseDelete} handleShow={handleShowDelete}/>
@@ -74,4 +75,4 @@ Movie.propTypes = {
     year: propTypes.number.isRequired
 }
 
-export default Movie
+export default Movie;

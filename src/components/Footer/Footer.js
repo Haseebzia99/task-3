@@ -6,7 +6,7 @@ class Footer extends Component {
         super(props)
 
         this.state = {
-            date: new Date(),
+            date: new Date()
         };
     }
     
@@ -23,8 +23,8 @@ class Footer extends Component {
             <button onClick={this.tick}>Update</button>
              <img className="logo" src={"https://www.freepnglogos.com/uploads/netflix-logo-0.png"}/>
             </div>
-        );
+        )
     }
 }
 
-export default Footer
+export default Footer;
