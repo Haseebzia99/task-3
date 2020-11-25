@@ -1,9 +1,10 @@
 import './Banner.css'
 import Button from 'react-bootstrap/Button';
 import Search from './Search/Search'
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { background } from './Styles';
 import { Modal } from "react-bootstrap";
+import FormModal from '../Form/FormModal';
 
 function AddMovie() {
     const [show, setShow] = useState(false);
@@ -19,15 +20,7 @@ function AddMovie() {
               <Modal.Header closeButton>
                 <Modal.Title>ADD MOVIE</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Form will be installed here</Modal.Body>
-              <Modal.Footer>
-                <Button variant="transparent" onClick={handleClose}>
-                  RESET
-                </Button>
-                <Button variant="danger" onClick={handleClose}>
-                  SUBMIT
-                </Button>
-              </Modal.Footer>
+              <Modal.Body><FormModal/></Modal.Body>
             </Modal>
         </div>
     )
