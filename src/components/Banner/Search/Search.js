@@ -1,34 +1,38 @@
 import './Search.css';
+
 import Button from 'react-bootstrap/Button';
-import React, { useState } from 'react'
-import useInput from './useInput';
+import React  from 'react'
+import {searchMovie, fetchMovies} from '../../../redux/actions/searchActions'
+import {connect} from 'react-redux'
 
-function Search() {
-    const [searchInput, bindsearchInput, resetsearchInput] = useInput('')
 
-    const submitHandler = e => {
-        e.preventDefault()
-        alert('do you want to search ?')
-        resetsearchInput()
+onChange = e => {
+    this.props.searchMovie(e.target.value);
+};
 
-    }
-        return (
-            <form onSubmit={submitHandler}>
-            <div className="wrap">
-                    <h1>FIND YOU MOVIE  </h1>
-                    <div className="search">
-                            <input 
-                            {...bindsearchInput}
-                            type="text" 
-                            className="searchTerm" 
-                            placeholder="What do you want to watch?"/>
-                            <Button className="searchButton" variant="danger">SEARCH</Button>
-                    </div>
-            </div>
-            </form>
-        )
-    }
+onSubmit = e => {
+    e.preventDefault();
+    this.props.fetchMovies(this.props.text);
+};
 
 
 
-export default Search; 
+function Search({ handleInput, search }) {
+    return (
+        <div className="wrap" onSubmit={this.onSubmit}>
+            <section className="search">
+                <input type="text" 
+                className="searchTerm" 
+                placeholder="What do you want to watch?" 
+                onChange={this.onChange} />
+                <Button className="searchButton" variant="danger">SEARCH</Button>
+            </section>
+        </div>
+    )
+}
+
+const mapStateToProps = state => ({
+    text: state.movies.text
+})
+
+export default connect(mapStateToProps, {searchMovie, fetchMovies})(Search); 
