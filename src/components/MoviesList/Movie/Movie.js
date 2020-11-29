@@ -125,7 +125,7 @@ const Movie = ({ moviesDetail, imageClick}) => {
 
     return (
         <div>
-            <img onClick={() => imageClick(moviesDetail.id)} src={moviesDetail.image}/>
+            <img alt="img" onClick={() => imageClick(moviesDetail.id)} src={moviesDetail.image}/>
             <div className="modals">
                 <EditMovieModal show={showEdit} handleClose={handleCloseEdit} handleShow={handleShowEdit}/>
                 <DeleteMovieModal show={showDelete} handleClose={handleCloseDelete} handleShow={handleShowDelete}/>
