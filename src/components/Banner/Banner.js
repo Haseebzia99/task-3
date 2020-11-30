@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import { background } from './Styles';
 import { Modal } from "react-bootstrap";
 import FormModal from '../Form/FormModal';
-import Search from './Search/Search'
-import axios from 'axios'
-import Results from './Search/Results'
 
 function AddMovie() {
     
@@ -31,41 +28,9 @@ function AddMovie() {
 
 
 const Banner = () => {
-
-const search = (e) => {
-    if (e.key === "Enter") {
-    axios(apiurl + "&s=" + state.s).then(({ data }) => {
-        let results = data.Search;
-
-        setState(prevState => {
-            return { ...prevState, results: results }
-        })
-    });
-  }
-}
-
-const [state, setState ] = useState({
-    s: "",
-    results: [],
-    selected: {}
-});
-
-const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=80cad683"
-
-const handleInput = (e) => {
-    let s = e.target.value;
-
- setState(prevState => {
-     return {...prevState, s: s}
- })
-}
-
-
     return(
         <div className="banner">
             <div className="banner-content">
-                <Search handleInput={handleInput} search={search}/>
-                <Results results={state.results} />
                 <AddMovie />
             </div>
         </div>

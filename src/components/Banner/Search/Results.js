@@ -1,5 +1,6 @@
 import React from 'react'
 import Result from './Result'
+import './Results.css'
 
 function Results({ results }) {
     return (

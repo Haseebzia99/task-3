@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import movies from '../../movies'
 import './MoviesList.css'
 import Movie from './Movie/Movie'
+
 
 const MoviesList = ({setBannerId, setswitchBanner}) => {
 
@@ -9,7 +10,6 @@ const MoviesList = ({setBannerId, setswitchBanner}) => {
     setBannerId(id)
     }
     
-
     return(
         <div className="Movieslist">
             {movies.map((moviesDetail)=> {
