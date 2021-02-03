@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import movies from '../../movies'
 import './MoviesList.css'
 import Movie from './Movie/Movie'

@@ -1,1 +1,0 @@
-  const apikey = 'http://www.omdbapi.com/?i=tt3896198&apikey=80cad683';

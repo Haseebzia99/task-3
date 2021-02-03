@@ -24,10 +24,12 @@ class ErrorBoundary extends Component {
 
     render() {
         if (this.state.hasError) {
-            return <h1>FallBack UI - A component has broke :( </h1>
+        }          return <h1>FallBack UI - A component has broke :( </h1>
+            
+            // return this.props.children
+            
         }
-        return this.props.children
-    }
+    end
 }
 
 export default ErrorBoundary

@@ -57,7 +57,6 @@ const handleInput = (e) => {
       <ErrorBoundary>
         <Footer /> 
       </ErrorBoundary>
-
     </Provider>
   );
 }

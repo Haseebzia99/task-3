@@ -11,7 +11,7 @@ class Footer extends Component {
     }
     
     tick = () => {
-        this.setState({
+        this.seState({
             date: new Date()
         })
     }
@@ -21,7 +21,7 @@ class Footer extends Component {
             <div className="footer">
             <h2> {this.state.date.toLocaleTimeString()} </h2>
             <button onClick={this.tick}>Update</button>
-             <img className="logo" src={"https://www.freepnglogos.com/uploads/netflix-logo-0.png"}/>
+             <img className="logo" alt="footer--logo" src={"https://www.freepnglogos.com/uploads/netflix-logo-0.png"}/>
             </div>
         )
     }

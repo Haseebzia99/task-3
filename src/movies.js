@@ -1,4 +1,3 @@
-import { ListGroupItem } from "react-bootstrap"
 
 const movies= [
     {

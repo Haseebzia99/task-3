@@ -3,7 +3,6 @@ import { Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import './Movie.css';
-import movies from '../../../movies';
 import { Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 
